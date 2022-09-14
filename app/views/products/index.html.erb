@@ -1,0 +1,22 @@
+ <%   if  notice  %> 
+	  <aside id= "notice" > <%=  notice  %> </aside>
+	 <%   end   %> 
+
+<h1>Products</h1>
+<table>
+	  <tfoot>
+  <tr>
+	      <td colspan="3">
+      <%= link_to 'New Product', new_product_path %>
+	      </td>
+	    </tr>
+	  </tfoot>
+	  <tbody>
+<div id="products">
+  <% @products.each do |product| %>
+    <%= render product %>
+    
+  <% end %>
+</div>
+
+
